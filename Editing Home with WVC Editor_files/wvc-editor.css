@@ -1,0 +1,283 @@
+/**
+ * WVC Editor Styles
+ *
+ * Custom styles for the WVC editor interface
+ *
+ * @package WVC_Theme
+ * @subpackage Editor
+ * @author 10Web
+ * @since 1.0.0
+ * @version 1.0.0
+ */
+
+/* WVC Editor Container */
+.wvc-editor-wrapper {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* WVC Editor Header */
+.wvc-editor-header {
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wvc-editor-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wvc-editor-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.wvc-editor-actions .button {
+    margin: 0;
+}
+
+/* WVC Editor Content */
+.wvc-editor-content {
+    padding: 20px;
+}
+
+.wvc-editor-section {
+    margin-bottom: 20px;
+}
+
+.wvc-editor-section:last-child {
+    margin-bottom: 0;
+}
+
+.wvc-editor-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form Elements */
+.wvc-input,
+.wvc-textarea,
+.wvc-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: border-color 0.2s ease;
+}
+
+.wvc-input:focus,
+.wvc-textarea:focus,
+.wvc-select:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.wvc-textarea {
+    min-height: 200px;
+    resize: vertical;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.wvc-select {
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Checkbox Styling */
+.wvc-editor-section input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.wvc-editor-section label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* WVC Editor Footer */
+.wvc-editor-footer {
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+}
+
+.wvc-editor-info {
+    font-size: 12px;
+    color: #666;
+}
+
+.wvc-editor-info p {
+    margin: 0 0 5px 0;
+}
+
+.wvc-editor-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Notifications */
+.wvc-notification {
+    position: fixed;
+    top: 32px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    z-index: 999999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wvc-notification-show {
+    transform: translateX(0);
+}
+
+.wvc-notification-success {
+    background: #46b450;
+    border-left: 4px solid #389a3f;
+}
+
+.wvc-notification-error {
+    background: #dc3232;
+    border-left: 4px solid #a00;
+}
+
+.wvc-notification-warning {
+    background: #ffb900;
+    border-left: 4px solid #d98500;
+    color: #333;
+}
+
+/* Loading State */
+#wvc-editor-loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+#wvc-editor-loading p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .wvc-editor-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .wvc-editor-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .wvc-editor-content {
+        padding: 15px;
+    }
+    
+    .wvc-editor-footer {
+        padding: 15px;
+    }
+    
+    .wvc-notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* WordPress Admin Integration */
+.wvc-editor-wrapper {
+    max-width: none;
+    margin: 0;
+}
+
+.wvc-editor-wrapper .button {
+    height: auto;
+    line-height: normal;
+    padding: 6px 12px;
+}
+
+/* Custom Scrollbar for Textarea */
+.wvc-textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wvc-textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.wvc-textarea::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.wvc-textarea::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Focus States for Better UX */
+.wvc-input:focus,
+.wvc-textarea:focus,
+.wvc-select:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+/* Button States */
+.wvc-editor-actions .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.wvc-editor-actions .button:hover:not(:disabled) {
+    background: #005a87;
+    border-color: #005a87;
+}
+
+/* Section Spacing */
+.wvc-editor-section + .wvc-editor-section {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+/* Status Indicator */
+.wvc-editor-info p:first-child {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Hello World Styling */
+.wvc-editor-header h2::before {
+    content: "👋 ";
+    margin-right: 5px;
+}
+
+.wvc-editor-header h2::after {
+    content: " 🌍";
+    margin-left: 5px;
+} 
